@@ -66,3 +66,111 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+.blog {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	gap: 40px;
+}
+
+header,
+h1,
+h2,
+p,
+footer {
+	grid-column: 2;
+}
+
+figure,
+blockquote {
+	grid-column: 1 / span 3;
+}
+
+.tip-vlevo {
+	grid-column: 1;
+}
+
+.tip-vlevo img {
+	width: 100%;
+}
+
+.tip-vpravo {
+	grid-column: 3;
+}
+
+h1 {
+	color: var(--zelena);
+	font-size: 90px;
+	margin: 50px 0;
+}
+
+header p {
+	color: var(--seda);
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+.tip-vlevo,
+.tip-vpravo {
+	background-color: var(--svetla);
+	color: var(--tmava);
+	
+	padding: 20px;
+	font-size: 16px;
+	height: fit-content;
+}
+
+.tip-vlevo {
+	text-align: right;
+	border-right: 2px solid var(--zluta);
+}
+
+.tip-vpravo {
+	border-left: 2px solid var(--zluta);
+}
+
+.tip-vlevo a,
+.tip-vpravo a {
+	color: var(--oranzova);
+}
+
+figure img {
+	width: 100%;
+}
+
+figcaption {
+	color: var(--seda);
+}
+
+blockquote {
+	text-align: center;
+	font-size: 36px;
+	color: var(--seda);
+	margin: 0;
+}
+
+blockquote::before,
+blockquote::after {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 2px;
+	background-color: var(--limetka);
+	margin: 20px auto;
+}
+
+h2 {
+	color: var(--zelena);
+	font-size: 60px;
+}
+
+footer {
+	color: var(--seda);
+	font-size: 16px;
+}
+
+footer a {
+	color: var(--seda);
+}
